@@ -5,7 +5,8 @@ using RestWithASPNETUdemy.Services;
 namespace RestWithASPNETUdemy.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [ApiVersion("1")]
+    [Route("api/[controller]/v{version:apiVersion}")]
     public class PersonController : ControllerBase
     { 
         private readonly ILogger<PersonController> _logger;

@@ -16,6 +16,9 @@ var connection = "Server=localhost;DataBase=rest_with_asp_net_udemy;Uid=root;Pwd
 //builder.Services.AddDbContext<MySQLContext>(options => options.UseMySql(connection, ServerVersion.AutoDetect(connection)));
 builder.Services.AddDbContext<MySQLContext>(options => options.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 21))));
 
+// Versioning API
+builder.Services.AddApiVersioning();
+
 // Dependency Injection
 builder.Services.AddScoped<IPersonService, PersonServiceImplementation>();
 
